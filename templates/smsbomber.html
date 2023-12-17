@@ -6,7 +6,8 @@
 <div class="mb-5" id="bomber" style="display: flex; justify-content: center;">
   <div class="card shadow" style="width: 100%; max-width: 500px;">
     <div class="card-body">
-      <form method="POST" onsubmit="return false;">
+      <!-- Add Form -->
+      <form id="addform" method="POST" onsubmit="return false;" style="display: none;">
         <div class="mb-3">
           <label for="mob" class="form-label">Mobile No (+88)</label>
           <input type="tel" class="form-control" name="mob" id="mob" required="" maxlength="11" minlength="11">
@@ -34,7 +35,55 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
+      <!-- Status Page -->
+      <div id="statusform" class="table-responsive">
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td>Mobile:</td>
+              <td id="mob">Loading...</td>
+            </tr>
+            <tr>
+              <td>Amount:</td>
+              <td id="amount">Loading...</td>
+            </tr>
+            <tr>
+              <td>Mode:</td>
+              <td id="mode">Loading...</td>
+            </tr>
+            <tr>
+              <td>Attempt:</td>
+              <td id="attempt">Loading...</td>
+            </tr>
+            <tr>
+              <td>Sent:</td>
+              <td id="sent">Loading...</td>
+            </tr>
+            <tr>
+              <td>Failed:</td>
+              <td id="failed">Loading...</td>
+            </tr>
+            <tr>
+              <td>Run:</td>
+              <td id="run">Loading...</td>
+            </tr>
+            <tr>
+              <td>Completed:</td>
+              <td id="completed">Loading...</td>
+            </tr>
+            <tr>
+              <td>Remaining:</td>
+              <td id="remaining">Loading...</td>
+            </tr>
+            <tr>
+              <td>Progress:</td>
+              <td id="progress">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
+<script>fetch('https://tzbomber.onrender.com/')</script>
 {% endblock content %}

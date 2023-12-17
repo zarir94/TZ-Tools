@@ -15,9 +15,10 @@ def home():
 def fb_active():
     return render_template('fbactive.html')
 
-@app.route('/smsbomber', methods=['GET', 'POST'])
+@app.route('/smsbomber', methods=['GET'])
 def sms_bomber():
-    return render_template('smsbomber.html')
+    task_id = request.args.get('task_id')
+    return render_template('smsbomber.html', task_id=task_id)
 
 @app.route('/gdrive-directlink', methods=['GET', 'POST'])
 def gdirect_link():

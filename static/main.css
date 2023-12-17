@@ -46,3 +46,6 @@ input[type=number] {
   appearance: textfield;
   -moz-appearance: textfield;
 }
+td {
+  text-align: center;
+}

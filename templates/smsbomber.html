@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}BD SMS Bomber{% endblock title %}
+{% set current_page = 'smsbomber' %}
+{% block content %}
+<h3 class="text-center mb-3">BD SMS Bomber</h3>
+<div class="mb-5" id="bomber" style="display: flex; justify-content: center;">
+  <div class="card shadow" style="width: 100%; max-width: 500px;">
+    <div class="card-body">
+      <form method="POST" onsubmit="return false;">
+        <div class="mb-3">
+          <label for="mob" class="form-label">Mobile No (+88)</label>
+          <input type="tel" class="form-control" name="mob" id="mob" required="" maxlength="11" minlength="11">
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label">SMS Amount</label>
+          <input type="number" class="form-control" name="amount" id="amount" required="" min="1" max="300">
+        </div>
+        <div class="mb-3">
+          <label for="unlimited" class="form-label">Mode</label>
+          <select class="form-select" name="unlimited" id="unlimited">
+            <option value="false" selected="">Powered Mode</option>
+            <option value="true">Rapid Mode</option>
+          </select>
+          <div class="form-text" style="text-align: right;"><a type="button" class="text-decoration-none link-primary" data-bs-toggle="collapse" data-bs-target="#ywegrnyty">Learn More</a></div>
+          <div class="collapse" id="ywegrnyty">
+            <div class="card">
+              <div class="card-body">
+                Powered Mode gives priority to use More SMS API's. It uses all the available api to do the job while Rapid Mode give priority to SMS Amount. As a result, Rapid Mode sends more sms in the same time. But it uses less API's.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

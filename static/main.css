@@ -1,0 +1,48 @@
+.dropdown-toggle::after {
+  vertical-align: 0.1em;
+}
+@media screen and (min-width: 992px) {
+  .dropdown-menu {
+    transition: all .1s ease-in-out;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);  
+  }
+  .dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+#footer {
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	--bs-box-shadow-sm: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.tool-section {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	gap: 10px;
+}
+.tool-section button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  padding: 0;
+}
+.tool-section button a {
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

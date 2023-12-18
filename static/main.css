@@ -3,16 +3,16 @@
 }
 @media screen and (min-width: 992px) {
   .dropdown-menu {
-    transition: all .1s ease-in-out;
+    transition: all .17s ease-in-out;
     display: block;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(50px);  
+    transform: translate3d(0, 0.5rem, 0);
   }
   .dropdown-menu.open {
     opacity: 1;
     visibility: visible;
-    transform: none;
+    transform: translate3d(0, 0, 0);
   }
 }
 #footer {
@@ -48,4 +48,42 @@ input[type=number] {
 }
 td {
   text-align: center;
+}
+.jq-toast-single {
+  font-size: inherit;
+}
+.jq-has-icon {
+  padding: 20px 20px 20px 50px;
+}
+.jq-toast-loader {
+  border-radius: unset;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  transition-timing-function: linear !important;
+}
+.close-jq-toast-single {
+  font-size: 20px;
+}
+.jq-toast-wrap.top-right {
+  top: 80px;
+}
+label.required::after {
+  content: '*';
+  color: var(--bs-danger);
+  margin-left: 5px;
+}
+@keyframes up-and-down {
+  50% {
+    transform: translateY(10px);
+  }
+}
+.fb-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 179, 95);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: up-and-down 3s infinite;
 }

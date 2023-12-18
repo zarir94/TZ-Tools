@@ -3,4 +3,66 @@
 {% set current_page = 'fbactive' %}
 {% block content %}
 <h3 class="text-center">FB 24H Active</h3>
+<div class="d-flex justify-content-center mb-5">
+  <div class="card shadow" style="width: 100%; max-width: 500px;">
+    <div class="card-body">
+      <!-- Form -->
+      <form id="fbform" onsubmit="return false">
+        <div class="mb-3">
+          <label for="fbinfo" class="form-label">Enter FB Cookie or ID</label>
+          <input type="text" name="fbinfo" id="fbinfo" required class="form-control">
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" name="loc" id="loc" required class="form-check-input">
+          <label class="form-check-label" for="loc">Allow Location Permission</label>
+          <div class="form-text">Your location is required to ensure more security.</div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      <!-- Page -->
+      <div id="activeinfo" style="display: none;">
+        <div class="d-flex justify-content-center">
+          <div class="fb-img mb-3"></div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td>ID:</td>
+                <td style="min-width: 50%;" id="fb_id"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+              <tr>
+                <td>Name:</td>
+                <td id="fbname"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+              <tr>
+                <td>Email:</td>
+                <td id="fbemail"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+              <tr>
+                <td>Date of Birth:</td>
+                <td id="fbdob"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+              <tr>
+                <td>Gender:</td>
+                <td id="fbgender"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+              <tr>
+                <td>Status:</td>
+                <td id="fbstatus"><span class="spinner-border spinner-border-sm"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <button class="btn btn-danger" id="disablebtn" style="display: none;">Pause Service</button>
+          <button class="btn btn-success" id="activebtn" style="display: none;">Resume Service</button>
+          <button class="btn btn-primary" onclick="window.location.href = window.location.href.split('?')[0]">Back to Bot</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}

@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from urllib.parse import unquote_plus
 from datetime import datetime
 
-__version__ = 1.2
+__version__ = 1.8
 
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'ighirgiihigh4i3ig43itiheifuhewi'

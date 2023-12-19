@@ -87,3 +87,10 @@ label.required::after {
   background-repeat: no-repeat;
   animation: up-and-down 3s infinite;
 }
+.grt {
+  transition: all 1.9s cubic-bezier(.68, -0.55, .27, 1.55);
+  border-radius: var(--bs-border-radius);
+}
+.shd {
+  box-shadow: 0px 0px 7px 3px var(--bs-warning-border-subtle);
+}
